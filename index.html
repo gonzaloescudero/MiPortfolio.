@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonzalo Escudero</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-move"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#languajes">Lenguajes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="intro parallax dark-background">
+            <div class="overlay"></div>
+            <div class="content">
+                <img src="images/logo.jpg" alt="Gonzalo Escudero" class="logo">
+                <h1>Bienvenido al Portafolio de Gonzalo Escudero</h1>
+                <p>Diseñador y Desarrollador Web Profesional de Montevideo, Uruguay.</p>
+            </div>
+        </section>
+        
+        <section id="sobre-mi" class="dark-background">
+            <h2>Sobre Mí</h2>
+            <img src="images/logo.jpg" alt="Gonzalo Escudero" class="profile-pic">
+            <p>Hola, soy Gonzalo Escudero, un apasionado diseñador y desarrollador web de Montevideo, Uruguay. Con 20 años, he desarrollado múltiples proyectos que destacan por su creatividad y funcionalidad. Mi objetivo es siempre crear experiencias únicas y personalizadas para cada uno de mis clientes.</p>
+        </section>
+        
+        <section id="languajes" class="skills">
+            <h2>Lenguajes Utilizados</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="images/html-icon.png" alt="HTML Icon">
+                    <p>HTML5</p>
+                </div>
+                <div class="skill">
+                    <img src="images/css-icon.png" alt="CSS Icon">
+                    <p>CSS3</p>
+                </div>
+                <div class="skill">
+                    <img src="images/js-icon.png" alt="JavaScript Icon">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="images/php-icon.png" alt="PHP Icon">
+                    <p>PHP</p>
+                </div>
+                <div class="skill">
+                    <img src="images/mysql-icon.png" alt="MySQL Icon">
+                    <p>MySQL</p>
+                </div>
+            </div>
+        </section>          
+        
+        <section id="contacto" class="dark-background contact">
+            <h2>Contacto</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                 
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gonzalo Escudero. Todos los Derechos Reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

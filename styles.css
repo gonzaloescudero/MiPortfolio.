@@ -1,0 +1,402 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    position: relative;
+}
+
+header {
+    background-color: #333;
+    color: rgb(198, 0, 0);
+    padding: 1rem 0;
+}
+
+nav {
+    position: fixed; /* Fija la barra */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Fondo oscuro */
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0; /* Más relleno arriba y abajo */
+}
+
+/* Ajusta el contenido para que no quede cubierto por el menú */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    position: relative;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #333;
+    background-color: #f39c12;
+    border-radius: 5px;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f39c12;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+main {
+    padding: 2rem;
+    position: relative;
+    overflow-x: hidden;
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+.parallax {
+    background-image: url('images/logo.jpg'); /* Ruta de tu imagen de fondo */
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.parallax .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece ligeramente la imagen de fondo */
+}
+
+.parallax .content {
+    position: relative;
+    z-index: 2;
+}
+
+.intro .logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.dark-background {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8); /* Oscurecer un poco más el fondo */
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.project h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.project p {
+    margin-top: 0.5rem;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.project-button:active {
+    transform: scale(0.95);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #34495e;
+    color: #ecf0f1;
+}
+
+.contact button {
+    padding: 0.5rem 1rem;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #e67e22;
+}
+
+footer {
+    background-color: #2a2929;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Fondo difuminado */
+.background-move {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    background-image: url('images/logo.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1; /* Asegura que esté detrás del contenido */
+    transform: translateZ(0); /* Mejora el rendimiento del renderizado */
+}
+
+/* Diseño principal del contenedor */
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('logo.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Tarjeta de agradecimiento */
+.thank-you-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Encabezado */
+.thank-you-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #e67e22;
+    font-weight: 700;
+}
+
+/* Mensaje */
+.thank-you-message p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: #ecf0f1;
+}
+
+/* Botón */
+.thank-you-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background-color: #e67e22;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.thank-you-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.thank-you-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Nueva Sección: Habilidades */
+.skills {
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro transparente */
+    color: #fff;
+    padding: 2rem; /* Espaciado interno */
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    margin: 2rem auto; /* Espaciado vertical y centrado */
+    width: 90%; /* Mismo ancho que los otros sectores */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    min-width: 300px; /* Ancho mínimo para pantallas pequeñas */
+}
+
+/* Título de la Sección */
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff; /* Color destacado */
+}
+
+/* Contenedor de las Habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Diseño adaptable */
+    gap: 1.5rem; /* Espaciado entre habilidades */
+}
+
+/* Cada Habilidad */
+.skill {
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 1.5rem; /* Espaciado interno */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.skill p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #fff;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Efecto hover más dinámico */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Mantén el diseño horizontal */
+        justify-content: center; /* Asegura el centrado horizontal */
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 1rem; /* Espaciado igual que en computadoras */
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Tamaño de fuente igual que en computadoras */
+        padding: 0.5rem 1rem; /* Área clickeable igual que en computadoras */
+    }
+}
+
+/* Estilos para pantallas extra pequeñas */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: row; /* Mantén el diseño horizontal */
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 0.5rem; /* Ajuste menor de espaciado si es necesario */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Opcional: tamaño más pequeño en pantallas muy chicas */
+        padding: 0.5rem 1rem; /* Consistencia con el diseño */
+    }
+}
